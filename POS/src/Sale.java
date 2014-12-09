@@ -30,7 +30,7 @@ public class Sale implements ItemIO {
 		int i = 0;
 		while (itr.hasNext()) {
 			Item curItem = (Item) itr.next();
-			int curPrice = curItem.getPrice() * (int) saleQuantityList.get(i);
+			int curPrice = curItem.getSalePrice() * (int) saleQuantityList.get(i);
 			wholePrice += curPrice;
 		}
 		System.out.println("손님은 " + wholePrice + "원만큼의 물건을 구입했다");

@@ -17,6 +17,8 @@ public class Main {
 		startSale();
 		provide();
 		sale();
+		finishSale();
+		getSaleResult();
 	}
 
 	public static void startSale() {
@@ -30,21 +32,25 @@ public class Main {
 	}
 	public static void provide(){
 		store.makeNewProvide();
-		store.enterItem(1, 100);
-		store.enterItem(2, 80);
-		store.enterItem(3, 60);
+		store.enterItem(1, 10);
+		store.enterItem(2, 20);
+		store.enterItem(3, 15);
 		store.makePayment(store.getProvide().end());
 		store.endProvide();
 	}
 	public static void sale(){
 		POST post=store.getPOST(0);
 		post.makeNewSale();
-		post.enterItem(1, 3);
-		post.enterItem(2, 4);
-		post.enterItem(3, 5);
+		post.enterItem(1, 8);
+		post.enterItem(2, 15);
+		post.enterItem(3, 13);
 		post.makePayment(post.getSale().end());
 		post.endSale();
-		
-		
+	}
+	public static void finishSale(){
+		money.addMoney(store.finishSale());
+	}
+	public static void getSaleResult(){
+		money.getSaleResult();
 	}
 }

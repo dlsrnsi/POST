@@ -30,7 +30,7 @@ public class Provide implements ItemIO {
 		int i = 0;
 		while (itr.hasNext()) {
 			Item curItem = (Item) itr.next();
-			int curPrice = curItem.getPrice()
+			int curPrice = curItem.getProvidePrice()
 					* (int) provideQuantityList.get(i);
 			wholePrice += curPrice;
 		}

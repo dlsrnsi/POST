@@ -38,8 +38,14 @@ public class POST implements Dealing {
 	}
 
 	@Override
-	public void getMoney(int money) {
-		storedMoney+=money;
+	public void setMoney(int money) {
+		storedMoney=money;
+	}
+
+	@Override
+	public int getMoney() {
+		// TODO Auto-generated method stub
+		return storedMoney;
 	}
 
 }

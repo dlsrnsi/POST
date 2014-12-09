@@ -2,12 +2,16 @@ package Item;
 
 public abstract class Item {
 	int id;
-	int price;
+	int salePrice;
+	int providePrice;
 	int number;
 	String name;
 
-	public int getPrice() {
-		return price;
+	public int getSalePrice() {
+		return salePrice;
+	}
+	public int getProvidePrice(){
+		return providePrice;
 	}
 
 	public int getID() {
